@@ -36,7 +36,7 @@ var APP_DATA = {
 			"title": "Negroni",
 			"text": "Классический коктейль на джине, кампари и вермуте.",
 			"meta": "Крепость ~24% • 120 мл",
-			"image": "img/cocktails/negroni.jpg",
+			"image": "img/cocktails/negroni.png",
 			"moreUrl": "https://site.ru/negroni",
 			"orderUrl": "https://site.ru/order?negroni"
         }
