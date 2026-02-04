@@ -1,98 +1,43 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ru">
 <head>
-<title>Project Title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>360° Terrace — cocktails</title>
+
+  <!-- Marzipano (CDN). Если нужен полностью офлайн-вариант — скажи, дам версию с локальным файлом. -->
+  <script src="https://unpkg.com/marzipano@0.10.2/dist/marzipano.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+  <div id="viewer"></div>
 
-<!-- Cocktail popup -->
-<div id="cocktailModalBackdrop">
-  <div id="cocktailModal" role="dialog" aria-modal="true">
-    <div id="cocktailModalHeader">
-      <h3 id="cocktailTitle"></h3>
-      <button id="closeBtn">×</button>
-    </div>
+  <!-- Modal -->
+  <div id="modalOverlay" class="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modalClose" aria-label="Закрыть">✕</button>
 
-    <div id="cocktailBody">
-  <img id="cocktailImg" />
+      <div class="modalBody">
+        <div class="modalMedia">
+          <img id="modalImg" alt="" />
+        </div>
 
-  <div id="cocktailContent">
-    <div id="cocktailText">
-      <p id="cocktailDesc"></p>
-      <p id="cocktailMeta"></p>
-    </div>
+        <div class="modalContent">
+          <h3 id="modalTitle" class="modalTitle"></h3>
 
-    <div id="cocktailActions">
-      <a id="moreLink" class="btn" target="_blank">Подробнее</a>
-      <a id="orderLink" class="btn btnPrimary">Заказать</a>
+          <ul id="modalSpecs" class="modalSpecs"></ul>
+
+          <div class="modalActions">
+            <button id="orderBtn" class="btnPrimary" type="button">Заказать</button>
+            <a id="moreLink" class="btnSecondary" href="#" target="_blank" rel="noopener">Подробнее</a>
+          </div>
+          <p class="modalNote">* Демо-данные. Замените фото/описание/ссылки в <code>app.js</code>.</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-
-
-<body class="single-scene ">
-
-<div id="pano"></div>
-
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-terrace-pancam004_people">
-        <li class="text">Terrace PanCam004_People</li>
-      </a>
-    
-  </ul>
-</div>
-
-<div id="titleBar">
-  <h1 class="sceneName"></h1>
-</div>
-
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
-
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
-
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
-
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
-
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
-
-<script src="data.js"></script>
-<script src="index.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>
