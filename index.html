@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>360° Terrace — cocktails</title>
+
+  <!-- Marzipano (CDN). Если нужен полностью офлайн-вариант — скажи, дам версию с локальным файлом. -->
+  <script src="https://unpkg.com/marzipano@0.10.2/dist/marzipano.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="viewer"></div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modalClose" aria-label="Закрыть">✕</button>
+
+      <div class="modalBody">
+        <div class="modalMedia">
+          <img id="modalImg" alt="" />
+        </div>
+
+        <div class="modalContent">
+          <h3 id="modalTitle" class="modalTitle"></h3>
+
+          <ul id="modalSpecs" class="modalSpecs"></ul>
+
+          <div class="modalActions">
+            <button id="orderBtn" class="btnPrimary" type="button">Заказать</button>
+            <a id="moreLink" class="btnSecondary" href="#" target="_blank" rel="noopener">Подробнее</a>
+          </div>
+          <p class="modalNote">* Демо-данные. Замените фото/описание/ссылки в <code>app.js</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
