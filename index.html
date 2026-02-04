@@ -8,6 +8,31 @@
 <link rel="stylesheet" href="vendor/reset.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Cocktail popup -->
+<div id="cocktailModalBackdrop">
+  <div id="cocktailModal" role="dialog" aria-modal="true">
+    <div id="cocktailModalHeader">
+      <h3 id="cocktailTitle"></h3>
+      <button id="closeBtn">×</button>
+    </div>
+
+    <div id="cocktailBody">
+      <img id="cocktailImg" />
+      <div>
+        <p id="cocktailDesc"></p>
+        <p id="cocktailMeta"></p>
+        <div id="cocktailActions">
+          <a id="moreLink" class="btn" target="_blank">Подробнее</a>
+          <a id="orderLink" class="btn btnPrimary">Заказать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <body class="single-scene ">
 
 <div id="pano"></div>

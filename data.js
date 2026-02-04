@@ -31,10 +31,14 @@ var APP_DATA = {
       "linkHotspots": [],
       "infoHotspots": [
         {
-          "yaw": 2.765801000230235,
-          "pitch": 0.6878702336371738,
-          "title": "Test1",
-          "text": "Text"
+			"yaw": 2.765801000230235,
+			"pitch": 0.6878702336371738,
+			"title": "Negroni",
+			"text": "Классический коктейль на джине, кампари и вермуте.",
+			"meta": "Крепость ~24% • 120 мл",
+			"image": "img/cocktails/negroni.jpg",
+			"moreUrl": "https://site.ru/negroni",
+			"orderUrl": "https://site.ru/order?negroni"
         }
       ]
     }
