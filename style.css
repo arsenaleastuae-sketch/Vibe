@@ -895,3 +895,44 @@ body.view-control-buttons .viewControlButton {
   background: #111;
   color: #fff;
 }
+
+#cocktailModal {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Заголовок */
+#cocktailTitle {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+/* Основной текст */
+#cocktailDesc {
+  color: #111111 !important;
+}
+
+/* Доп. информация */
+#cocktailMeta {
+  color: #555555 !important;
+}
+
+/* Кнопки */
+#cocktailActions .btn {
+  color: #000000 !important;
+}
+
+#cocktailActions .btnPrimary {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+
+#cocktailImg {
+  width: 160px;
+  height: 160px;
+  display: block;
+  object-fit: cover;
+  background-color: #eeeeee;
+  border-radius: 12px;
+}
