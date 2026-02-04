@@ -936,3 +936,53 @@ body.view-control-buttons .viewControlButton {
   background-color: #eeeeee;
   border-radius: 12px;
 }
+
+/* ===== Layout fix: text vs buttons ===== */
+
+#cocktailBody {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+}
+
+/* Правая часть */
+#cocktailContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Текст */
+#cocktailText {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+/* Кнопки всегда отдельно */
+#cocktailActions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* Кнопки одной ширины */
+#cocktailActions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* Мобилка */
+@media (max-width: 480px) {
+  #cocktailBody {
+    grid-template-columns: 1fr;
+  }
+
+  #cocktailImg {
+    width: 100%;
+    height: 200px;
+  }
+
+  #cocktailActions {
+    flex-direction: column;
+  }
+}
